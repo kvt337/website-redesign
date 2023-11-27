@@ -302,6 +302,21 @@ code {
 }
 /* End of Navigation Styles */
 
+
+
+/*footer styles*/
+footer{
+    background-color: #35498a;
+    color: white;
+    font-weight: 500;
+}
+
+footer img{
+    width: 25%;
+}
+
+/*end of footer styles*/
+
 /* Grid System */
 .container-fluid,
 .container {

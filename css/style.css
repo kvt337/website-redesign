@@ -1,4 +1,11 @@
+/*
+    Created by: Student Name - Student ID
+    Created on: Today's Date
+    Updated on: Today's Date
+    Project: Flexbox
+*/
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,9 +13,17 @@
 }
 
 body {
+    font-family: 'Darker Grotesque', sans-serif;
     padding: 1rem;
     margin: 0;
 }
+
+/*
+    Created by: Student Name - Student ID
+    Created on: Today's Date
+    Updated on: Today's Date
+    Project: Flexbox
+*/
 
 :root {
     /* Grid */
@@ -27,17 +42,31 @@ body {
     --col-11: calc(var(--grid-width) * 11);
     --col-12: calc(var(--grid-width) * 12);
 
+    /*Typography*/
+    --base-font-size: 20px;
+    --base-scale: 1.618;
+    --base-line-height: calc(1em * var(--base-scale));
+    --p: 1.618rem;
+    --h4-font-size: 1rem;
+    --h3-font-size: calc(var(--h4-font-size)* var(--base-scale));
+    --h2-font-size: calc(var(--h3-font-size)* var(--base-scale));
+    --h1-font-size: calc(var(--h2-font-size)* var(--base-scale));
+
     /* Branding */
-    --orange: #ffa500;
-    --dark-blue: #00008b;
-    --yellow: #ffff00;
-    --blue: #0000ff;
-    --red: #ff0000;
-    --green: #008000;
-    --purple: #800080;
-    
-    --black: #000000;
-    --gray: #808080;
+    --primary: hsl(324, 100%, 90%);
+    --primary-hover:  hsl(324, 100%, 90%);
+    --secondary: hsl(292, 85%, 87%);
+    --secondary-blurred: hs1(292, 80%, 90%);
+    --secondary-hover: hsl(292, 85%, 87%);
+    --tertiary: hsl(250, 85%, 87%);
+    --tertiary-hover: hsl(250, 85%, 87%);
+    --font-color: black;
+
+    --gray-0: #222222;
+    --gray-1: #666666;
+    --gray-2: #999999;
+    --gray-3: #dadada;
+
     --white: white;
 
     /* Other */
@@ -55,11 +84,91 @@ body {
     font-size: 1rem;
 }
 
+/* Images */
+img {
+    max-width: 100%;
+}
+
+.round-image {
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.round-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* End of Images */
+
+/* TASK: Paste your typography styles here */
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    border: 1px solid #1f1f1f;
+    width: 100%;
+}
+
+table th,
+table td {
+    padding: calc(var(--table-padding) / 2) var(--table-padding);
+    border: 1px solid #1f1f1f;
+    vertical-align: top;
+}
+
+thead {
+    background-color: #1f1f1f;
+}
+
+thead th {
+    color: white;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+tbody tr:hover {
+    background-color: #efefef;
+}
+
+caption {
+    caption-side: bottom;
+    text-align: left;
+    padding: calc(var(--table-padding) / 2) 0;
+}
+/* End of Table Styles */
+
+/* Code tag */
+code {
+    font-family: monospace;
+    color: crimson;
+    font-size: 0.75rem;
+    line-height: 1.618em;
+}
+/* End of code tag */
+
+/* Special classes */
+.w-14 {
+    width: 14rem;
+}
+/* End of Special classes */
+
 /* Navigation Styles */
 .navbar {
+    background: #fff; /* Set your background color or image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Set your shadow values */
+    /*padding: 20px;*/
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 600;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     align-content: flex-start;
 }
@@ -101,10 +210,13 @@ body {
 }
 
 .navbar-nav li > a {
-    color: var(--primary);
+    font-size: 120%;
+    color: black;
     display: block;
     overflow: hidden;
     padding: calc((1em / var(--base-scale)) / var(--base-scale)) calc(1em / var(--base-scale));
+    margin-left: 20px;
+    margin-right: 20px;
     text-decoration: none;
     border-bottom: 2px solid transparent;
 }
@@ -112,22 +224,22 @@ body {
 .navbar-nav li.active > a {
     border-bottom-color: var(--primary);
 }
-/*
+
 .navbar-nav li > a:hover {
     background-color: var(--primary);
     color: var(--white);
-}*/
+}
 
 .dropdown-toggle::after {
-    content: "\f0d8";
+    content: "\f0d7";
     font-family: "FontAwesome";
     font-weight: 400;
-    margin-left: var(--base-line-height);
+    margin-left: 5px;
 }
 
-.collapse .dropdown-toggle::after {
-    content: "\f0d7";
-}
+.dropdown-toggle.active::after {
+    content: "\f0d8";
+  }
 
 .dropdown.collapse .dropdown-menu {
     display: none;
@@ -594,3 +706,270 @@ body {
         background-color: var(--blue-12);
     }
 }
+
+/* TASK: Paste the styles for the Flexbox Assignment: In-Class Practice */
+.article-img{
+    flex: none;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.article-img img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+@media screen and (min-width: 768px){ /*desktop*/
+    .article{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 1.618rem;
+        margin-bottom: 1.618rem;
+    }
+    
+    .article:nth-child(odd){
+        flex-direction: row-reverse;
+    }
+    
+    .article-description{
+        flex: 0 0 calc(70% - 1.618rem);
+        max-width: calc(70% - 1.618rem);
+    
+    }
+    
+    .article-img{
+        flex: 0 0 30%;
+        max-width: 30%;
+        aspect-ratio: 1;
+    }
+    
+    .article-img img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+/* Branding */
+.swatch {
+    aspect-ratio: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 1px solid var(--gray-0);
+}
+
+.swatch.primary { background-color: var(--primary) }
+.swatch.primary-hover { background-color: var(--primary-hover) }
+.swatch.secondary { background-color: var(--secondary) }
+.swatch.secondary-hover { background-color: var(--secondary-hover) }
+.swatch.tertiary { background-color: var(--tertiary) }
+.swatch.tertiary-hover { background-color: var(--tertiary-hover) }
+.swatch.font-color { background-color: var(--font-color) }
+.swatch.gray-0 { background-color: var(--gray-0) }
+.swatch.gray-1 { background-color: var(--gray-1) }
+.swatch.gray-2 { background-color: var(--gray-2) }
+.swatch.gray-3 { background-color: var(--gray-3) }
+.swatch.white { background-color: var(--white) }
+
+.swatch.primary,
+.swatch.primary-hover,
+.swatch.secondary,
+.swatch.secondary-hover,
+.swatch.tertiary,
+.swatch.tertiary-hover,
+.swatch.primary,
+.swatch.font-color,
+.swatch.gray-0,
+.swatch.gray-1 {
+    color: var(--white);
+}
+
+/*Buttons*/
+.btn{
+    display: inline-block;
+    overflow: hidden;
+    font-size: 1rem;
+    line-height: var(--base-line-height);
+    padding: 1em var(--base-line-height);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--primary);
+    border: 0 none;
+}
+
+.btn:hover{
+    background-color: var(--gray-1);
+}
+
+.btn.btn-primary{
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn.btn-primary:hover{
+    background-color: var(--primary-hover);
+}
+
+.btn.btn-secondary{
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.btn.btn-secondary:hover{
+    background-color: var(--secondary-hover);
+}
+
+.btn.btn-tertiary{
+    background-color: var(--tertiary);
+    color: var(--white);
+}
+
+.btn.btn-tertiary-hover{
+    background-color: var(--tertiary-hover);
+}
+
+.btn.btn-sm{
+    font-size: calc(1em / var(--base-scale));
+
+}
+
+.btn.btn-lg{
+    font-size: var(--h3-font-size);
+    
+}
+
+/* Forms */
+fieldset {
+    padding: var(--base-line-height);
+    border: 1px solid var(--primary);
+    margin-bottom: var(--base-line-height);
+}
+
+fieldset legend {
+    color: var(--primary);
+}
+
+.form-group {
+    margin-bottom: var(--base-line-height);
+}
+
+fieldset .form-group:last-of-type {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control,
+.form-check-input {
+    accent-color: var(--secondary);
+}
+
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: var(--base-line-height);
+    padding: calc((1em / var(--base-scale)) / var(--base-scale) / var(--base-scale)) calc(1em / var(--base-scale) / var(--base-scale));
+    border: 1px solid var(--gray-0);
+    color: var(--font-color);
+}
+
+input.form-control {
+    width: 100%;
+    max-width: 100%;
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    min-height: calc(4 * var(--base-line-height));
+}
+
+/* Pseudo Selectors */
+.form-control:focus {
+    outline: var(--secondary-blurred) solid 2px;
+    outline-offset: 2px;
+}
+
+.form-check-input:checked {
+    box-shadow: 0 0 4px 4px var(--secondary-blurred);
+}
+
+.form-control:disabled,
+.form-control:hover:disabled,
+input:disabled,
+input:hover:disabled {
+    background-color: var(--gray-3);
+    color: var(--gray-2);
+    cursor: not-allowed;
+}
+
+input:invalid,
+input:focus:invalid {
+    border-color: red;
+    box-shadow: 0 0 2px red;
+    outline: red solid 2px;
+    outline-offset: 2px;
+}
+
+
+
+/* End of Branding */
+
+/*
+    * Window size styles
+    * Do not edit or delete this from examples
+*/
+#windowSize {
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    user-select: none;
+    z-index: 10;
+}
+/* End of Window size styles */
+
+/*
+    * Window size styles
+    * Do not edit or delete this from examples
+*/
+#windowSize {
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    user-select: none;
+    z-index: 10;
+}
+/* End of Window size styles */

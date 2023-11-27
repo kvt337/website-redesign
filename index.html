@@ -24,28 +24,28 @@
                         <div class="navigation collapse" id="navigation">
                             <ul class="navbar-nav">
                                 <li class="active">
-                                    <a href="index.html">Home <span class="sr-only">(current)</span></a>
+                                    <a href="index.html" class="home">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li>
-                                    <a href="about.html">About Us</a>
+                                    <a href="about.html" class="about">About Us</a>
                                 </li>
                                 <li class="dropdown collapse">
-                                    <a class="dropdown-toggle" href="#">Get Involved</a>
+                                    <a class="dropdown-toggle involved" href="#">Get Involved</a>
                                     <div class="dropdown-menu">
-                                        <a href="events.html">Events</a>
-                                        <a href="programs.html">Programs</a>
-                                        <a href="sponsors.html">Become a Partner</a>
-                                        <a href="volunteer.html">Volunteer Opportunities</a>
+                                        <a href="events.html" class="involved">Events</a>
+                                        <a href="programs.html" class="involved">Programs</a>
+                                        <a href="sponsors.html" class="involved">Become a Partner</a>
+                                        <a href="volunteer.html" class="involved">Volunteer Opportunities</a>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="blog.html">Blog</a>
+                                    <a href="blog.html" class="blog">Blog</a>
                                 </li>
                                 <li>
-                                    <a href="contact.html">Contact</a>
+                                    <a href="contact.html" class="contact">Contact</a>
                                 </li>
                                 <li>
-                                    <a href="donate.html" class="btn btn-secondary">Donate</a>
+                                    <a href="donate.html" class="donate">Donate</a>
                                 </li>
                             </ul>
                         </div>
@@ -54,8 +54,8 @@
             </div>
         </div>
 
-
-        <div class="container-fluid">
+        <!--content-->
+        <div class="container">
 
            
         </div>
@@ -63,32 +63,46 @@
         <!--footer-->
         <footer>
             <div class="row">
-                <div class="col-xs-12 col-md-4 col-lg-3">
-                    <img src="images/logo-white.png" alt="logo" />
+                <div class="address footer-content col-xs-12 col-md-4 col-lg-3">
+                    <a href="index.html"><img src="images/logo-white.png" alt="logo" /></a>
                     <p>808 Dalworth</p>
                     <p>Street Ste. A105</p>
                     <p>Grand Prairie, TX</p>
                     <p>75050</p>
                 </div>
 
-                <div class="col-xs-12 col-md-4 col-lg-3">
-                    <p>Contact</p>
-                    <p>(214) 716 0266</p>
-                    <p>weserve@everygoodworkntx.org</p>
+                <div class="horizontal-line"></div>
+
+                <div class="footer-content col-xs-12 col-md-4 col-lg-3">
+                    <h4>Contact</h4>
+                    <p><a href="tel:+2147160266"><i class="fa-solid fa-phone" style="color: #ffffff;"></i></a>&nbsp;(214) 716 0266</p>
+                    <p><a href="mailto:weserve@everygoodworkntx.org"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i></a>&nbsp;weserve@everygoodworkntx.org</p>
                 </div>
 
-                <div class="col-xs-12 col-md-4 col-lg-3">
-                    <p>Social</p>
-                    <p>@egw.ntx</p>
-                    <p>Every Good Work, NTX</p>
+                <div class="horizontal-line"></div>
+
+                <div class="footer-content col-xs-12 col-md-4 col-lg-3">
+                    <h4>Social</h4>
+                    <p><a href="https://www.instagram.com/egw.ntx/"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>&nbsp;@egw.ntx</p>
+                    <p><a href="https://www.facebook.com/egw.ntx"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>&nbsp;Every Good Work, NTX</p>
                 </div>
 
-                <div class="col-xs-12 col-md-12 col-lg-3">
-                    <p>Join Our Mailing List</p>
-                    <a href="#" class="btn btn-secondary">Sign Up</a>
+                <div class="horizontal-line"></div>
+
+                <div class="footer-content col-xs-12 col-md-12 col-lg-3">
+                    <h4>Join Our Mailing List</h4>
+                    <form>
+                        <div class="form-group row">
+                            <label for="subscribe" class="col-sm-12 col-form-label"></label>
+                            <div class="col-sm-12">
+                                <input type="email" name="subscribe" id="subscribe" class="form-control" placeholder="user@domain.com"/>
+                            </div>
+                        </div>
+                        <input class="btn btn-blue-two" type="submit" name="submit" id="submit" value="Sign Up" />
+                    </form>
                 </div>
 
-                <div class="col-xs-12 col-md-12 col-lg-12">
+                <div class="footer-content col-xs-12 col-md-12 col-lg-12">
                     <p>&copy; 2021 Every Good Work of North Texas</p>
                 </div>
             </div>

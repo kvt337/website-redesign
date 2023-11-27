@@ -159,11 +159,10 @@ code {
 }
 /* End of Special classes */
 
-/* Navigation Styles */
+/* navigation Styles */
 .navbar {
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /*padding: 20px;*/
     font-family: 'Darker Grotesque', sans-serif;
     font-weight: 600;
     display: flex;
@@ -184,9 +183,9 @@ code {
 }
 
 .navbar-toggler {
-    background-color: var(--primary);
+    background-color: transparent;
     border: 0 none;
-    color: white;
+    color: orange;
     width: 2rem;
     height: 2rem;
     display: flex;
@@ -221,13 +220,36 @@ code {
     border-bottom: 2px solid transparent;
 }
 
-.navbar-nav li.active > a {
-    border-bottom-color: var(--primary);
+.navbar-nav li.active .home,
+.navbar-nav li .home:hover {
+    border-bottom-color: orange;
 }
 
-.navbar-nav li > a:hover {
-    background-color: var(--primary);
-    color: var(--white);
+.navbar-nav li.active .about,
+.navbar-nav li .about:hover {
+    border-bottom-color: yellow;
+}
+
+.navbar-nav li.active .dropdown-toggle.involved,
+.navbar-nav li .involved:hover {
+    border-bottom-color: lightskyblue;
+}
+
+
+
+.navbar-nav li.active .blog,
+.navbar-nav li .blog:hover {
+    border-bottom-color: red;
+}
+
+.navbar-nav li.active .contact,
+.navbar-nav li .contact:hover {
+    border-bottom-color: green;
+}
+
+.navbar-nav li.active .donate,
+.navbar-nav li .donate:hover {
+    border-bottom-color: purple;
 }
 
 .dropdown-toggle::after {
@@ -246,7 +268,7 @@ code {
 }
 
 .dropdown-menu {
-    background-color: var(--gray-2);
+    background-color: lightskyblue;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -263,7 +285,7 @@ code {
 }
 
 .dropdown-menu > a:hover {
-    background-color: var(--gray-1);
+    background-color: rgb(79, 166, 220);
 }
 
 .sr-only {
@@ -279,6 +301,21 @@ code {
 }
 
 @media screen and (min-width: 768px){
+
+    .navbar-nav li > a.donate{
+        color: orange;
+        border: 2px solid orange;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .navbar-nav li.active .donate,
+    .navbar-nav li .donate:hover {
+        color: white;
+        background-color: orange;
+        border-bottom-color: orange;
+    }
+
     .navbar-toggler {
         display: none;
     }
@@ -306,13 +343,69 @@ code {
 
 /*footer styles*/
 footer{
-    background-color: #35498a;
+    background-color: #3b4f84;
     color: white;
     font-weight: 500;
+
+}
+
+footer h4{
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+footer .footer-content{
+    border-right: 2px solid white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+footer .address a{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+footer form{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+@media screen and (max-width: 766px){
+    footer .row{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .horizontal-line{
+        border-bottom: 2px solid white;
+        width: 70%;
+    }
+}
+
+footer .address p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+i{
+    font-size: 25px;
+    margin-right: 10px;
 }
 
 footer img{
     width: 25%;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 /*end of footer styles*/
@@ -846,15 +939,29 @@ footer img{
     background-color: var(--primary-hover);
 }
 
-.btn.btn-secondary{
+.btn.btn-orange-two{
+    padding-left: 30px;
+    padding-right: 30px;
     font-weight: 500;
     border: 2px solid orange;
     color: orange;
 }
 
-.btn.btn-secondary:hover{
+.btn.btn-orange-two:hover{
     background-color: orange;
     color: white;
+}
+
+.btn.btn-blue-two{
+    line-height: 10px;
+    font-weight: 500;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background-color: #3b4f84;
+}
+
+.btn.btn-blue-two:hover{
+    background-color: #283a6b;
 }
 
 .btn.btn-tertiary{
@@ -911,7 +1018,6 @@ textarea {
     font-size: 1rem;
     line-height: var(--base-line-height);
     padding: calc((1em / var(--base-scale)) / var(--base-scale) / var(--base-scale)) calc(1em / var(--base-scale) / var(--base-scale));
-    border: 1px solid var(--gray-0);
     color: var(--font-color);
 }
 

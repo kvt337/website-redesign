@@ -161,14 +161,14 @@ code {
 
 /* Navigation Styles */
 .navbar {
-    background: #fff; /* Set your background color or image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Set your shadow values */
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /*padding: 20px;*/
     font-family: 'Darker Grotesque', sans-serif;
     font-weight: 600;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     align-content: flex-start;
 }
@@ -176,7 +176,7 @@ code {
 .navbar-brand {
     display: block;
     overflow: hidden;
-    background: url(../images/logo.svg) no-repeat center/contain transparent;
+    background: url(../images/logo.png) no-repeat center/contain transparent;
     width: 10rem;
     height: 4rem;
     text-indent: -9999px;
@@ -832,12 +832,14 @@ code {
 }
 
 .btn.btn-secondary{
-    background-color: var(--secondary);
-    color: var(--white);
+    font-weight: 500;
+    border: 2px solid orange;
+    color: orange;
 }
 
 .btn.btn-secondary:hover{
-    background-color: var(--secondary-hover);
+    background-color: orange;
+    color: white;
 }
 
 .btn.btn-tertiary{

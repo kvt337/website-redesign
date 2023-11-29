@@ -14,7 +14,6 @@
 
 body, html {
     font-family: 'Darker Grotesque', sans-serif;
-    padding: 1rem;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -78,12 +77,6 @@ body, html {
 * {
     box-sizing: border-box;
     position: relative;
-}
-
-body {
-    padding: 1rem;
-    margin: 0;
-    font-size: 1rem;
 }
 
 .round-image {
@@ -225,7 +218,7 @@ code {
 
 .navbar-nav li.active .about,
 .navbar-nav li .about:hover {
-    border-bottom-color: yellow;
+    border-bottom-color: rgb(255, 208, 0);
 }
 
 .navbar-nav li.active .dropdown-toggle.involved,
@@ -240,7 +233,7 @@ code {
 
 .navbar-nav li.active .contact,
 .navbar-nav li .contact:hover {
-    border-bottom-color: green;
+    border-bottom-color: rgb(17, 168, 85);
 }
 
 .navbar-nav li.active .donate,
@@ -413,11 +406,17 @@ p{
 }
 
 .title-buttons{
-    left: 200px;
+    width: 420.28px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-left: 100px;
 }
 
 .title-buttons >.btn.btn-blue-two{
     border: none;
+    margin: 5px;
 }
 
 .title {
@@ -428,6 +427,42 @@ p{
 /* End of Content: Index */
 
 
+/* content: get involved - events */
+
+.event-intro-img img{
+    width: 80%;
+}
+
+.event-intro{
+    margin: 50px;
+}
+
+.events .row:last-child {
+    background-color: #f0f0f0;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+.event-section{
+    background-color: white;
+    width: 70%;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.event-info{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.event-img img{
+    width: 100%;
+}
+
+/*end of content: get involved - events*/
 
 
 /*footer styles*/

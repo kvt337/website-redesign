@@ -429,12 +429,20 @@ p{
 
 /* content: get involved - events */
 
-.event-intro-img img{
+.event-intro-img img, .donate-intro-img img{
     width: 80%;
 }
 
-.event-intro{
-    margin: 50px;
+.event-intro-img, .donate-intro-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.event-intro, .donate-intro{
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .events .row:last-child {
@@ -454,15 +462,145 @@ p{
 }
 
 .event-info{
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.event-img{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-color: lightskyblue;
+}
+
+.event-section:nth-child(3) .event-img {
+    width: 57%;
 }
 
 .event-img img{
     width: 100%;
 }
 
+.event-limit{
+    margin-bottom: 2px;
+}
+
+.event-spots{
+    margin-top: 2px;
+}
+
+.event-time, .event-limit, .event-spots{
+    color:#666666;
+}
+
+.more-btn.btn, .less-btn.btn{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 766px){
+    .event-section{
+        flex-flow: column wrap;
+    }
+
+    .event-section:nth-child(3) .event-img {
+        width: 100%;
+    }
+    /*
+    .event-limit, .event-spots, .event-desc, .btn.btn-blue{
+        display: none;
+    }
+
+    .more-btn.btn{
+        display: inline-block;
+    }*/
+
+}
+
 /*end of content: get involved - events*/
+
+/*donate*/
+
+.donate-section{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
+.donate-desc{
+    background-color: rgb(196, 92, 220);
+    border-radius: 20px;
+    color: white;
+    width: 55%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.donate-price{
+    z-index: 1;
+    margin-bottom: -70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 10px solid rgb(196, 92, 220);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    color: rgb(196, 92, 220);
+}
+
+.donate-section:last-child .donate-price h1 {
+    font-size: 30px;
+}
+
+.donate-section:last-child .donate-desc {
+    margin-left: -100px;
+    margin-right: -100px;
+}
+
+.donate li{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.donate .row:nth-child(2), .donate-link {
+    background-color: #f0f0f0;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.donate-link > .btn.btn-purple-two{
+    font-size: 30px;
+    background-color: #f0f0f0;
+}
+
+.donate-link{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.donate-link > p{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+}
+
+/*end of donate */
 
 
 /*footer styles*/
@@ -526,7 +664,7 @@ footer .address p{
     margin-bottom: 2px;
 }
 
-i{
+footer i{
     font-size: 25px;
     margin-right: 10px;
 }
@@ -1004,43 +1142,6 @@ footer img{
     }
 }
 
-/* Branding */
-.swatch {
-    aspect-ratio: 1;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    border: 1px solid var(--gray-0);
-}
-
-.swatch.primary { background-color: var(--primary) }
-.swatch.primary-hover { background-color: var(--primary-hover) }
-.swatch.secondary { background-color: var(--secondary) }
-.swatch.secondary-hover { background-color: var(--secondary-hover) }
-.swatch.tertiary { background-color: var(--tertiary) }
-.swatch.tertiary-hover { background-color: var(--tertiary-hover) }
-.swatch.font-color { background-color: var(--font-color) }
-.swatch.gray-0 { background-color: var(--gray-0) }
-.swatch.gray-1 { background-color: var(--gray-1) }
-.swatch.gray-2 { background-color: var(--gray-2) }
-.swatch.gray-3 { background-color: var(--gray-3) }
-.swatch.white { background-color: var(--white) }
-
-.swatch.primary,
-.swatch.primary-hover,
-.swatch.secondary,
-.swatch.secondary-hover,
-.swatch.tertiary,
-.swatch.tertiary-hover,
-.swatch.primary,
-.swatch.font-color,
-.swatch.gray-0,
-.swatch.gray-1 {
-    color: var(--white);
-}
-
 /*Buttons*/
 .btn{
     display: inline-block;
@@ -1057,15 +1158,6 @@ footer img{
 
 .btn:hover{
     background-color: var(--gray-1);
-}
-
-.btn.btn-primary{
-    background-color: var(--primary);
-    color: var(--white);
-}
-
-.btn.btn-primary:hover{
-    background-color: var(--primary-hover);
 }
 
 .btn.btn-orange-two{
@@ -1093,13 +1185,27 @@ footer img{
     background-color: #283a6b;
 }
 
-.btn.btn-tertiary{
-    background-color: var(--tertiary);
-    color: var(--white);
+.btn.btn-purple-two{
+    line-height: 10px;
+    font-weight: 500;
+    color: rgb(196, 92, 220);
+    border: 2px solid rgb(196, 92, 220);
 }
 
-.btn.btn-tertiary-hover{
-    background-color: var(--tertiary-hover);
+.btn.btn-purple-two:hover{
+    color: white;
+    background-color: rgb(196, 92, 220);
+}
+
+.btn.btn-blue{
+    line-height: 10px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: lightskyblue;
+}
+
+.btn.btn-blue:hover{
+    background-color: rgb(76, 166, 222);
 }
 
 .btn.btn-sm{

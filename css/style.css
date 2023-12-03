@@ -218,7 +218,7 @@ code {
 
 .navbar-nav li.active .about,
 .navbar-nav li .about:hover {
-    border-bottom-color: rgb(255, 208, 0);
+    border-bottom-color: rgb(255, 238, 80);
 }
 
 .navbar-nav li.active .dropdown-toggle.involved,
@@ -426,23 +426,85 @@ p{
 
 /* End of Content: Index */
 
+/*about us*/
+
+.person-section-title{
+    display: flex;
+    justify-content: center;
+}
+
+.team{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.team h2{
+    font-size: 32px;
+}
+
+.person-section{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: center;
+}
+
+.person-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 238, 80);
+}
+
+.team .col-sm-12 h2{
+    margin-bottom: -20px;
+}
+
+.team .col-sm-12 p{
+    margin-bottom: 40px;
+}
+
+.team .col-sm-12:nth-child(1) .person-img {
+    background-image: url('../images/kim-phipps.jpg');
+    background-size: cover;
+}
+
+.team .col-sm-12:nth-child(2) .person-img {
+    background-image: url('../images/gayle-henry.jpg');
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.team .col-sm-12:nth-child(3) .person-img {
+    background-image: url('../images/kiera-phipps.jpg');
+    background-size: cover;
+}
+
+.team .col-sm-12:nth-child(4) .person-img {
+    background-image: url('../images/isaiah-whitaker.jpg');
+    background-size: cover;
+}
+
+/*end of about us*/
+
 
 /* content: get involved - events */
 
-.event-intro-img img, .donate-intro-img img{
+.event-intro-img img, .donate-intro-img img, .about-intro-img img, .about-mission-img img{
     width: 80%;
 }
 
-.event-intro-img, .donate-intro-img{
+.event-intro-img, .donate-intro-img, .about-intro-img, .about-mission-img{
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
 
-.event-intro, .donate-intro{
+.event-intro, .donate-intro, .about-intro, .about-mission{
     margin-left: 100px;
-    margin-right: 100px;
+    margin-right: 20px;
 }
 
 .events .row:last-child {
@@ -472,15 +534,24 @@ p{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    background-color: lightskyblue;
+}
+
+.event-section:nth-child(2) .event-img {
+    width: 100%;
+    background-image: url('../images/Thrift-Store.jfif');
+    background-position: center;
 }
 
 .event-section:nth-child(3) .event-img {
-    width: 57%;
+    width: 100%;
+    background-image: url('../images/pexels-suzy-hazelwood-5010877.jpg');
+    background-size: 600px ;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .event-img img{
-    width: 100%;
+    display: none;
 }
 
 .event-limit{
@@ -502,12 +573,22 @@ p{
 
 
 @media screen and (max-width: 766px){
-    .event-section{
+    .event-section {
         flex-flow: column wrap;
     }
 
+    .event-img{
+        width: 300px;
+        height: 300px;
+    }
+
+
+
     .event-section:nth-child(3) .event-img {
         width: 100%;
+        background-size: cover; /* Adjust based on your requirements */
+        background-repeat: no-repeat;
+        background-position: center;
     }
     /*
     .event-limit, .event-spots, .event-desc, .btn.btn-blue{
@@ -519,8 +600,240 @@ p{
     }*/
 
 }
-
 /*end of content: get involved - events*/
+
+/* get involved - programs */
+
+.program-section{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    color: white;
+}
+
+.program-section h1{
+    font-weight: 500;
+    margin-bottom: -10px;
+}
+
+.program-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(98, 186, 240, 0.7);
+    z-index: 0;
+  }
+
+.col-sm-12:nth-of-type(1) .program-section{
+    background-image: url('../images/program-1.jpg');
+    background-size: cover;
+}
+
+.col-sm-12:nth-of-type(2) .program-section{
+    background-image: url('../images/program-2.jpg');
+    background-size: cover;
+}
+
+.col-sm-12:nth-of-type(3) .program-section{
+    background-image: url('../images/program-3.jpg');
+    background-size: cover;
+}
+
+.program.col-sm-12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 50px;
+}
+
+.program.col-sm-12:nth-of-type(1){
+    justify-content: flex-end;
+}
+
+.program.col-sm-12:nth-of-type(3){
+    justify-content: flex-start;
+}
+
+.bg{
+    width: 300px;
+    height: 300px;
+    background-color: lightskyblue;
+    z-index: -2;
+    margin-top: -300px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 990px) {
+    .program.col-sm-12:nth-of-type(1){
+        justify-content: center;
+    }
+    
+    .program.col-sm-12:nth-of-type(3){
+        justify-content: center;
+    }
+}
+
+/*end of get involved - programs*/
+
+/*get involved - sponsors*/
+
+.sponsors, .sponsor-info{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.sponsors h1, .sponsors p{
+    margin-bottom: 10px;
+}
+
+.sponsor-img{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.sponsor-img img{
+    width: 30%;
+    margin: 20px;
+}
+
+.sponsor-info{
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.sponsor-info h1{
+    margin-bottom: 0px;
+}
+
+.sponsor-info p{
+    margin-bottom: 40px;
+}
+
+
+@media screen and (max-width: 768px){
+    .sponsors{
+        text-align: center;
+    }
+
+    .sponsor-img{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+/*end of get involved - sponsors*/
+
+/*blog*/
+
+.story{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article-img{
+    flex: none;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.article-img img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.story-desktop{
+    display: none;
+}
+
+
+@media screen and (min-width: 768px){ /*desktop*/
+
+    .row > .col-xs-12:first-child .story {
+        display: none;
+      }
+
+      .story-desktop {
+        margin-top: 20px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-end;
+        background: url('../images/placeholder.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 400px;
+        margin-bottom: 20px;
+        position: relative; /* Add relative positioning to the container */
+    }
+
+    .blog-info{
+        margin-left: 10px;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .article{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 1.618rem;
+        margin-bottom: 1.618rem;
+    }
+    
+    .article-img{
+        flex: 0 0 30%;
+        max-width: 100%;
+        aspect-ratio: 1;
+    }
+    
+    img{
+        max-width: 100%;
+    }
+
+    .article-img img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+/*end of blog*/
+
 
 /*donate*/
 
@@ -609,7 +922,6 @@ footer{
     background-color: #3b4f84;
     color: white;
     font-weight: 500;
-
 }
 
 footer h4{
@@ -1082,66 +1394,6 @@ footer img{
     }
 }
 
-/* TASK: Paste the styles for the Flexbox Assignment: In-Class Practice */
-.article-img{
-    flex: none;
-    max-width: 100%;
-    aspect-ratio: 16/9;
-}
-
-.article-img img{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-
-@media screen and (min-width: 768px){ /*desktop*/
-    .article{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        gap: 1.618rem;
-        margin-bottom: 1.618rem;
-    }
-    
-    .article:nth-child(odd){
-        flex-direction: row-reverse;
-    }
-    
-    .article-description{
-        flex: 0 0 calc(70% - 1.618rem);
-        max-width: calc(70% - 1.618rem);
-    
-    }
-    
-    .article-img{
-        flex: 0 0 30%;
-        max-width: 30%;
-        aspect-ratio: 1;
-    }
-    
-    .article-img img{
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-}
-
 /*Buttons*/
 .btn{
     display: inline-block;
@@ -1206,6 +1458,17 @@ footer img{
 
 .btn.btn-blue:hover{
     background-color: rgb(76, 166, 222);
+}
+
+.btn.btn-red{
+    line-height: 10px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: red;
+}
+
+.btn.btn-red:hover{
+    background-color: rgb(176, 0, 0);
 }
 
 .btn.btn-sm{

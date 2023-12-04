@@ -834,6 +834,71 @@ p{
 
 /*end of blog*/
 
+/* contact */
+
+.form-group.row{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+}
+
+.contact{
+    margin-bottom: 20px;
+}
+
+.contact h2{
+    margin-top: 20px;
+}
+
+.contact-intro{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.contact-intro h1{
+    margin-bottom: -10px;
+}
+
+.contact .row .col-lg-3:nth-child(1){
+    color: white;
+    background-color: rgb(17, 168, 85);
+    height: 545.37px;
+}
+
+.contact-information{
+    margin-top: 70px;
+}
+
+.contact-item{
+    display: flex;
+    font-size: 15px;
+}
+
+@media screen and (max-width:766px) {
+
+    .contact>.row{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .contact .row .col-lg-3:nth-child(1){
+        height: 320px;
+    }
+
+    .contact-information {
+        margin-top: 30px;
+    }
+
+    .contact .row .col-lg-4 h2{
+        margin-bottom: 20px;
+    }
+}
+
+/* end of contact */
+
 
 /*donate*/
 
@@ -1469,6 +1534,17 @@ footer img{
 
 .btn.btn-red:hover{
     background-color: rgb(176, 0, 0);
+}
+
+.btn.btn-green{
+    line-height: 10px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: rgb(17, 168, 85);
+}
+
+.btn.btn-green:hover{
+    background-color: rgb(13, 136, 68);
 }
 
 .btn.btn-sm{

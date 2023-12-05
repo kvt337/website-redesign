@@ -51,24 +51,7 @@ body, html {
     --h4-font-size: 1rem;
     --h3-font-size: calc(var(--h4-font-size)* var(--base-scale));
     --h2-font-size: calc(var(--h3-font-size)* var(--base-scale));
-    --h1-font-size: calc(var(--h2-font-size)* var(--base-scale));
-
-    /* Branding */
-    --primary: hsl(324, 100%, 90%);
-    --primary-hover:  hsl(324, 100%, 90%);
-    --secondary: hsl(292, 85%, 87%);
-    --secondary-blurred: hs1(292, 80%, 90%);
-    --secondary-hover: hsl(292, 85%, 87%);
-    --tertiary: hsl(250, 85%, 87%);
-    --tertiary-hover: hsl(250, 85%, 87%);
-    --font-color: black;
-
-    --gray-0: #222222;
-    --gray-1: #666666;
-    --gray-2: #999999;
-    --gray-3: #dadada;
-
-    --white: white;
+    --h1-font-size: calc(var(--h2-font-size)* var(--base-scale))
 
     /* Other */
     --table-padding: 1.618rem;
@@ -150,6 +133,18 @@ code {
 /* End of Special classes */
 
 /* navigation Styles */
+
+@media screen and (max-width: 767px) {
+    .navbar-nav li > a.donate {
+        margin-top: -20px;
+    }
+}
+
+.navbar-nav{
+    margin-top: 3%;
+    margin-bottom: 0px;
+}
+
 .navbar {
     z-index: 1;
     background: #fff;
@@ -340,40 +335,79 @@ h2{
 
 p{
     font-size: 20px;
+}
+
+.event-intro-img img, .volunteer-intro-img img, .donate-intro-img img, .about-intro-img img, .about-mission-img img{
+    width: 100%;
+}
+
+.volunteer-intro-img img{
+    width: 80%;
+}
+
+.event-intro-img, .volunteer-intro-img, .donate-intro-img, .about-intro-img, .about-mission-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.event-intro, .volunteer-intro, .donate-intro, .about-intro, .about-mission{
+    margin-left: 100px;
+    margin-right: 20px;
+}
+
+.donate-mission, .about-mission{
+    margin-left: 0;
+    margin-right: 30px;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 921px){
+    .event-intro, .volunteer-intro, .donate-intro, .about-intro, .about-mission{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .donate-mission, .about-mission{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
 
 }
+
+/*end of typography*/
+
+
+/* Content: Index */
 
 .index-info {
     margin-left: 80px;
     margin-right: 80px;
 }
 
-/* Image styles */
-
 .index {
-    position: relative; /* Ensure relative positioning for the container */
+    position: relative; 
 }
 
 .index img {
     width: 100%;
-    height: auto; /* This ensures the aspect ratio is maintained */
+    height: auto; 
 }
 
 .info-img img {
-    width: 100%; /* Adjust this if needed */
-    height: auto; /* This ensures the aspect ratio is maintained */
+    width: 100%; 
+    height: auto; 
 }
 
 .title img {
     width: 40%;
-    height: auto; /* This ensures the aspect ratio is maintained */
+    height: auto; 
 }
 
 .index-link > .fa-solid {
     font-size: 50px;
 }
-
-/* Content: Index */
 
 .index-text {
     margin: 10px;
@@ -410,7 +444,7 @@ p{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     margin-left: 100px;
 }
 
@@ -422,6 +456,36 @@ p{
 .title {
     position: relative;
 
+}
+
+@media screen and (max-width: 921px){
+    .index-info{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .index{
+        background-image: url('../images/index-img-mobile.png');
+    }
+
+    .title{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .title img{
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    .title-buttons{
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    
 }
 
 /* End of Content: Index */
@@ -441,6 +505,23 @@ p{
 
 .team h2{
     font-size: 32px;
+}
+
+.about-bg{
+    margin-bottom: 50px;
+    position: relative;
+    z-index: -2;
+    margin-top: -250px;
+    height: 336.95px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(255, 238, 80) 0%, rgb(255, 242, 123) 60%, white 100%);
+}
+
+@media screen and (max-width: 991px) {
+    .about-bg{
+        display: none;
+    }
+    
 }
 
 .person-section{
@@ -489,25 +570,9 @@ p{
 /*end of about us*/
 
 
-/* content: get involved - events */
+/* content: get involved - events and volunteer opportunities */
 
-.event-intro-img img, .donate-intro-img img, .about-intro-img img, .about-mission-img img{
-    width: 80%;
-}
-
-.event-intro-img, .donate-intro-img, .about-intro-img, .about-mission-img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-.event-intro, .donate-intro, .about-intro, .about-mission{
-    margin-left: 100px;
-    margin-right: 20px;
-}
-
-.events .row:last-child {
+.events .row:last-child, .volunteer .row:last-child {
     background-color: #f0f0f0;
     flex-flow: column wrap;
     justify-content: center;
@@ -516,27 +581,37 @@ p{
 }
 
 
-.event-section{
+.event-section, .volunteer-section{
     background-color: white;
     width: 70%;
     display: flex;
     margin-bottom: 30px;
 }
 
-.event-info{
+.volunteer-section{
+    width: 50%;
+}
+
+.event-info, .volunteer-info{
     margin-top: -15px;
     margin-bottom: 15px;
     margin-left: 30px;
     margin-right: 30px;
 }
 
-.event-img{
+.event-img, .volunteer-img{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
 }
 
 .event-section:nth-child(2) .event-img {
+    width: 100%;
+    background-image: url('../images/Thrift-Store.jfif');
+    background-position: center;
+}
+
+.volunteer-section:nth-child(2) .volunteer-img {
     width: 100%;
     background-image: url('../images/Thrift-Store.jfif');
     background-position: center;
@@ -550,19 +625,31 @@ p{
     background-position: center;
 }
 
-.event-img img{
-    display: none;
+.volunteer-section:nth-child(3) .volunteer-img {
+    width: 100%;
+    background-image: url('../images/pexels-suzy-hazelwood-5010877.jpg');
+    background-size: 600px ;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.event-limit{
+/*.event-img img{
+    display: none;
+}*/
+
+.event-limit, .volunteer-limit{
     margin-bottom: 2px;
 }
 
-.event-spots{
+.event-spots, .volunteer-spots{
     margin-top: 2px;
 }
 
 .event-time, .event-limit, .event-spots{
+    color:#666666;
+}
+
+.volunteer-time, .volunteer-limit, .volunteer-spots{
     color:#666666;
 }
 
@@ -573,20 +660,20 @@ p{
 
 
 @media screen and (max-width: 766px){
-    .event-section {
+    .event-section, .volunteer-section {
         flex-flow: column wrap;
     }
 
-    .event-img{
+    .event-img, .volunteer-img{
         width: 300px;
         height: 300px;
     }
 
 
 
-    .event-section:nth-child(3) .event-img {
+    .event-section:nth-child(3) .event-img, .volunteer-section:nth-child(3) .volunteer-img {
         width: 100%;
-        background-size: cover; /* Adjust based on your requirements */
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -789,7 +876,7 @@ p{
         background-repeat: no-repeat;
         height: 400px;
         margin-bottom: 20px;
-        position: relative; /* Add relative positioning to the container */
+        position: relative;
     }
 
     .blog-info{
@@ -902,6 +989,24 @@ p{
 
 /*donate*/
 
+
+.donate-info{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.donate-info p{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.donate-info h1{
+    margin-bottom: -10px;
+}
+
 .donate-section{
     display: flex;
     flex-flow: column wrap;
@@ -952,7 +1057,7 @@ p{
     font-weight: 500;
 }
 
-.donate .row:nth-child(2), .donate-link {
+.donate .row:nth-child(3), .donate-link {
     background-color: #f0f0f0;
     justify-content: center;
     align-items: flex-start;
@@ -965,6 +1070,7 @@ p{
 }
 
 .donate-link{
+    background-color: #f0f0f0;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;

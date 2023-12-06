@@ -287,8 +287,8 @@ code {
 @media screen and (min-width: 768px){
 
     .navbar-nav li > a.donate{
-        color: orange;
-        border: 2px solid orange;
+        color: rgb(196, 92, 220);
+        border: 2px solid rgb(196, 92, 220);
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -296,8 +296,8 @@ code {
     .navbar-nav li.active .donate,
     .navbar-nav li .donate:hover {
         color: white;
-        background-color: orange;
-        border-bottom-color: orange;
+        background-color: rgb(196, 92, 220);
+        border-bottom-color: rgb(196, 92, 220);
     }
 
     .navbar-toggler {
@@ -337,7 +337,7 @@ p{
     font-size: 20px;
 }
 
-.event-intro-img img, .volunteer-intro-img img, .donate-intro-img img, .about-intro-img img, .about-mission-img img{
+.event-intro-img img, .volunteer-intro-img img, .donate-intro-img img, .about-intro-img img, .about-mission-img img, .program-intro-img img{
     width: 100%;
 }
 
@@ -345,14 +345,14 @@ p{
     width: 80%;
 }
 
-.event-intro-img, .volunteer-intro-img, .donate-intro-img, .about-intro-img, .about-mission-img{
+.event-intro-img, .volunteer-intro-img, .donate-intro-img, .about-intro-img, .about-mission-img, .program-intro-img{
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
 
-.event-intro, .volunteer-intro, .donate-intro, .about-intro, .about-mission{
+.event-intro, .volunteer-intro, .donate-intro, .about-intro, .about-mission, .program-intro{
     margin-left: 100px;
     margin-right: 20px;
 }
@@ -364,7 +364,7 @@ p{
 }
 
 @media screen and (max-width: 921px){
-    .event-intro, .volunteer-intro, .donate-intro, .about-intro, .about-mission{
+    .event-intro, .volunteer-intro, .donate-intro, .about-intro, .about-mission, .program-intro{
         margin-left: 40px;
         margin-right: 40px;
     }
@@ -712,14 +712,15 @@ p{
         height: 300px;
     }
 
-
-
     .event-section:nth-child(3) .event-img, .volunteer-section:nth-child(3) .volunteer-img {
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
     }
+
+ 
+
     /*
     .event-limit, .event-spots, .event-desc, .btn.btn-blue{
         display: none;
@@ -730,19 +731,81 @@ p{
     }*/
 
 }
+
+.signup{
+    margin-bottom: 20px;
+}
+
+.signup-intro{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.signup-intro h1{
+    margin-bottom: 10px;
+}
+
+.signup .row .col-lg-3:nth-child(1){
+    color: white;
+    background-color: lightskyblue;
+    height: 545.37px;
+}
+
+.signup .row .col-lg-4{
+    margin-top: 50px;
+}
+
+.signup .row .col-lg-4 .btn:nth-child(2){
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.signup-information{
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width:766px) {
+
+    .signup>.row{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .signup .row .col-lg-3:nth-child(1){
+        height: 445.37px;
+    }
+
+    .signup-information {
+        margin-top: 30px;
+        height: 300px;
+    }
+
+    .signup .row .col-lg-4 h2{
+        margin-bottom: 20px;
+    }
+}
 /*end of content: get involved - events*/
 
 /* get involved - programs */
+
+.program-buttons{
+    margin-bottom: 50px;
+}
 
 .program-section{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    align-items: center;
     position: relative;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     text-align: center;
     color: white;
 }
@@ -752,6 +815,10 @@ p{
     margin-bottom: -10px;
 }
 
+.program-section .btn{
+    width: 50%;
+}
+
 .program-section::before {
     content: "";
     position: absolute;
@@ -759,7 +826,7 @@ p{
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(98, 186, 240, 0.7);
+    background: rgba(18, 80, 118, 0.7);
     z-index: 0;
   }
 
@@ -795,11 +862,11 @@ p{
 }
 
 .bg{
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     background-color: lightskyblue;
     z-index: -2;
-    margin-top: -300px;
+    margin-top: -350px;
     margin-left: 20px;
 }
 
@@ -980,13 +1047,14 @@ p{
     margin-top: 20px;
 }
 
-.contact-intro{
+.contact-intro, .signup-intro{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
+
 
 .contact-intro h1{
     margin-bottom: -10px;
@@ -1005,6 +1073,23 @@ p{
 .contact-item{
     display: flex;
     font-size: 15px;
+}
+
+.contact-msg{
+    margin-left: 35%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-msg h3, .contact-msg i{
+    margin-bottom: -20px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 @media screen and (max-width:766px) {
